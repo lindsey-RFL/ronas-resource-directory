@@ -390,7 +390,28 @@ function applyFilters(){
     if(F.conditions.size>0&&!F.conditions.has(org.conditionType))return false;
     if(F.support.size>0){const cats=org.supportCategories||[];if(![...F.support].some(s=>cats.includes(s)))return false;}
     if(F.populations.size>0){const pops=org.populations||[];if(![...F.populations].some(p=>pops.includes(p)))return false;}
-    if(F.ages.size>0){const ages=org.ageGroups||[];if(![...F.ages].some(a=>ages.includes(a)))return false;}
+    if(F.ages.size>0){const ages=org.ageGroups||[];if(![...F.ages].some(a=>ages.includes(a)))return false;},
+  {
+    name: "Dear NICU Mama",
+    website: "https://www.dearnicumama.com",
+    geo: "National",
+    conditions: "NICU / premature birth, serious illness in newborns",
+    services: "Emotional & peer support, Educational resources",
+    description: "Dear NICU Mama is a trauma-informed nonprofit founded by NICU mothers that provides free peer support, virtual events, podcasts, private community groups, and hospital support kits to NICU moms and families. Founded in 2019, they now reach thousands of mothers across the nation and globe.",
+    who: "NICU mothers, parents of premature and seriously ill newborns",
+    timing: "During treatment (in-patient), After treatment ends, Ongoing",
+    access: "Self-referral",
+    eligibility: "Current or past NICU mother or family member",
+    conditionType: "Other",
+    populations: ["Parents & caregivers"],
+    ageGroups: ["Pediatric (0-17)"],
+    supportCategories: ["Emotional Support", "Information & Advocacy"],
+    regions: ["National"],
+    cost: "Free",
+    multilingual: false,
+    languages: ["English"],
+    logoUrl: "https://www.dearnicumama.com/wp-content/uploads/2022/01/DNM-Logo.png"
+  }
     if(F.regions.size>0){
       const regs=org.regions||[];
       const isNational=org.geo==='National'||org.geo==='International'||regs.includes('National')||regs.includes('International');
